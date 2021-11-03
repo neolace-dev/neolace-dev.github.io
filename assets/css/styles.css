@@ -1,0 +1,107 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        font-feature-settings:
+            /* Use special variants of the numbers 4, 6, 9 */
+            "cv02" 1, "cv03" 1, "cv04" 1
+        ;
+        background-image: url("/home-bg.svg"), linear-gradient(to top, #4c545c, #f3f3f5);
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .common-bg  {
+        /* Some elements need a background should that matches the body background */
+        background-image: linear-gradient(to top, #4c545c, #f3f3f5);
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    header nav a {
+        @apply ml-6 text-gray-700;
+        /* The styles below are to make the text not shift on hover */
+        @apply inline-flex flex-col items-center justify-between;
+    }
+    header nav a::after {
+        /* This is all to make the text not shift on hover */
+        content: attr(data-text);
+        content: attr(data-text) / "";
+        @apply font-bold h-0 invisible overflow-hidden select-none pointer-events-none;
+      
+        @media speech {
+            display: none;
+        }
+    }
+    header nav a:hover {
+        @apply font-bold;
+    }
+    body {
+        
+    }
+    h1 {
+        @apply text-2xl font-bold mt-4 mb-1;
+    }
+    h2 {
+        @apply text-xl /*mt-4*/ mb-1 font-semibold scroll-margin-top-on md:scroll-margin-top-off;
+    }
+
+    p {
+        @apply mb-2;
+    }
+
+    main a {
+        text-decoration: underline theme("colors.tn-blue.DEFAULT");
+        @apply hover:text-tn-blue-dark;
+    }
+
+    blockquote {
+        @apply bg-gray-100 rounded-lg p-3 m-4 lg:text-lg text-center font-normal border-l-4 border-r-4 border-tn-blue;
+    }
+
+    ol {
+        @apply list-decimal ml-6 mb-6;
+    }
+
+    ul {
+        @apply list-disc ml-6 mb-6;
+    }
+
+    li {
+        @apply mb-1;
+    }
+
+    li p:last-child {
+        @apply mb-2;
+    }
+    
+    li::marker {
+        @apply text-gray-400;
+    }
+}
+
+@responsive {
+    .hyphens-auto {
+        hyphens: auto;
+    }
+    .hyphens-none {
+        hyphens: none;
+    }
+    /* Utilities so that when a user clicks on an #anchor link, it won't scroll behind the sticky header */
+    .scroll-margin-top-on {
+        /*scroll-margin-top: 6em; not yet supported in Safari :/ */
+        @apply pt-40 -mt-36;
+    }
+    .scroll-margin-top-off {
+        @apply pt-0 mt-4;
+    }
+}
+
+@layer components {
+
+}

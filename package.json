@@ -1,0 +1,18 @@
+{
+    "name": "neolace-www",
+    "version": "0.0.1",
+    "description": "neolace website",
+    "author": "Braden MacDonald <braden@technotes.org>",
+    "license": "private",
+    "scripts": {
+        "dev": "hugo server",
+        "build": "NODE_ENV=production hugo --verbose --gc --minify"
+    },
+    "devDependencies": {
+        "autoprefixer": "~10.4.0",
+        "postcss": "~8.3.11",
+        "postcss-cli": "~9.0.1",
+        "postcss-import": "~14.0.2",
+        "tailwindcss": "~2.2.19"
+    }
+}

@@ -1,0 +1,32 @@
+<head>
+    <title>{{ if ne .Title .Site.Title }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{/* <meta> tag for the version of Hugo that generated the site. The generator tag allows the Hugo team to track the usage and popularity of Hugo. */}}
+    {{ hugo.Generator }}
+
+    {{ if .Site.IsServer }}
+        {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ else }}
+        {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ end }}
+
+    {{/* Favicon
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+    */}}
+
+    {{/* Font family: Inter Var */}}
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    {{/* Font family: Roboto Mono */}}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+
+    {{/* Analytics */}}
+    <script async defer data-domain="neolace.com" src="https://plausible.io/js/plausible.js"></script>
+</head>

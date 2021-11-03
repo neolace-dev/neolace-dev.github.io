@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode }}'>
+
+    {{- partial "head.html" . -}}
+
+    <body class="flex flex-col min-h-screen justify-between">
+
+        <header class="common-bg flex-initial w-full max-w-5xl mx-auto sticky top-0 flex flex-row h-20 items-center justify-between">
+            <a href="/" class="no-underline font-semibold text-xl text-gray-700">neolace</a>
+        
+            <nav>
+                <a href="/features/" data-text="Features">Features</a>
+                <a href="/contact/" data-text="Contact Us">Contact Us</a>
+            </nav>
+            
+        </header>        
+
+        {{- block "premain" . }}
+        {{- end }}
+
+        {{- block "body" . }}
+
+
+            <div class="common-bg flex-initial max-w-5xl mt-8 mx-auto w-full sticky top-20">
+                {{/* adds rounded corners and white line to the top of the main element, even on scroll */}}
+                <div class="w-full bg-gray-50 lg:rounded-t-lg pt-6"></div>
+            </div>
+
+            <main class="flex-1 mb-0 lg:mb-4 max-w-5xl mx-auto text-gray-700 bg-gray-50 w-full lg:rounded-b-lg p-6">
+
+                {{- block "main" . }}
+
+                    <h1>{{ .Title }}</h1>
+
+                    {{ if (.Params.toc) }}
+                        <h2 class="text-base font-semibold">Contents</h2>
+                        {{ .TableOfContents }}
+                    {{ end }}
+
+                    <div class="text-justify hyphens-auto md:text-left md:hyphens-none">
+                        {{- block "content" . }}
+                            {{ .Content }}
+                        {{- end }}
+                    </div>
+
+                {{- end }}
+            </main>
+
+        {{- end }}
+
+    </body>
+</html>
