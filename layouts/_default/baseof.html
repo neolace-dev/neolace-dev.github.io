@@ -6,10 +6,12 @@
     <body class="flex flex-col min-h-screen justify-between">
 
         <header class="common-bg flex-initial w-full max-w-5xl mx-auto sticky top-0 flex flex-row h-20 items-center justify-between">
-            <a href="/" class="no-underline font-semibold text-xl text-gray-700">neolace</a>
+            <a href="/" class="no-underline font-semibold text-xl text-gray-700 ml-3 md:ml-0">neolace</a>
         
-            <nav>
+            <nav class="text-sm lg:text-base mr-3 lg:mr-0">
+                <a href="/" data-text="Home" class="hidden lg:inline-flex">Home</a>
                 <a href="/features/" data-text="Features">Features</a>
+                <a href="/demo/" data-text="Demo">Demo</a>
                 <a href="/contact/" data-text="Contact Us">Contact Us</a>
             </nav>
             
@@ -30,7 +32,9 @@
 
                 {{- block "main" . }}
 
+                    {{- block "titleheading" . }}
                     <h1>{{ .Title }}</h1>
+                    {{- end }}
 
                     {{ if (.Params.toc) }}
                         <h2 class="text-base font-semibold">Contents</h2>

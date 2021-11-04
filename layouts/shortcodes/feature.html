@@ -1,3 +1,11 @@
 <h2>{{ .Get "title" }}</h2>
 
-{{ .Inner }}
+<div class="flex flex-row flex-wrap md:flex-nowrap">
+    <div class="order-1 md:order-2 flex-auto w-full md:max-w-md">
+        <img src="{{ .Get "img" }}" alt="" class="border-gray-300 border-2">
+    </div>
+    <div class="order-2 md:order-1 flex-grow md:pr-4">
+        {{ .Inner }}
+    </div>
+</div>
+

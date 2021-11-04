@@ -18,7 +18,7 @@
     }
     .common-bg  {
         /* Some elements need a background should that matches the body background */
-        background-image: linear-gradient(to top, #4c545c, #f3f3f5);
+        background-image: url("/home-bg.svg"), linear-gradient(to top, #4c545c, #f3f3f5);
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
