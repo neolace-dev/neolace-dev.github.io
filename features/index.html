@@ -1,0 +1,61 @@
+<!doctype html><html lang=en-us><head>
+<title>Features of neolace &#183; neolace</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=stylesheet href=https://www.neolace.com/css/styles.min.9142d6b9cb6f7ed30013881a4e97091436fbd80981ccab49ec259868b58f1f67.css integrity="sha256-kULWuctvftMAE4gaTpcJFDb72AmBzKtJ7CWYaLWPH2c=">
+<link rel=stylesheet href=https://rsms.me/inter/inter.css>
+<link rel=preconnect href=https://fonts.gstatic.com>
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+<script async defer data-domain=neolace.com src=https://plausible.io/js/plausible.js></script>
+</head>
+<body class="flex flex-col min-h-screen justify-between">
+<header class="common-bg flex-initial w-full max-w-5xl mx-auto sticky top-0 flex flex-row h-20 items-center justify-between">
+<a href=/ class="no-underline font-semibold text-xl text-gray-700 ml-3 md:ml-0">neolace</a>
+<nav class="text-sm lg:text-base mr-3 lg:mr-0">
+<a href=/ data-text=Home class="hidden lg:inline-flex">Home</a>
+<a href=/features/ data-text=Features>Features</a>
+<a href=/demo/ data-text=Demo>Demo</a>
+<a href=/contact/ data-text="Contact Us">Contact Us</a>
+</nav>
+</header>
+<div class="common-bg flex-initial max-w-5xl mt-8 mx-auto w-full sticky top-20">
+<div class="w-full bg-gray-50 lg:rounded-t-lg pt-6"></div>
+</div>
+<main class="flex-1 mb-0 lg:mb-4 max-w-5xl mx-auto text-gray-700 bg-gray-50 w-full lg:rounded-b-lg p-6">
+<h1>Features of neolace</h1>
+<div class="text-justify hyphens-auto md:text-left md:hyphens-none">
+<p>At neolace, we&rsquo;re building the world&rsquo;s best platform for sharing technical knowledge, with a particular focus on knowledge that&rsquo;s shared and developed by multiple organizations - such as members of a consortium. Each neolace-powered site presents articles, images, drawings, and other technical content in a highly organized fashion, and the platform has clever innovations to make it easy to keep the content organized and up to date as it grows. Content can be restricted to selected groups or open to the public, and contributions can be required to receive approval from an editor before being accepted.</p>
+<h2>Familiar reading experience</h2>
+<div class="flex flex-row flex-wrap md:flex-nowrap">
+<div class="order-1 md:order-2 flex-auto w-full md:max-w-md">
+<img src=/features-plantdb.png alt class="border-gray-300 border-2">
+</div>
+<div class="order-2 md:order-1 flex-grow md:pr-4">
+<p>Every entry in a neolace knowledge base can have an article, with text, images, properties, and links. You can read it as easily as reading an article on Wikipedia. But unlike Wikipedia, neolace entries are easy for machines to read too.</p>
+</div>
+</div>
+<h2>Relationships and properties</h2>
+<div class="flex flex-row flex-wrap md:flex-nowrap">
+<div class="order-1 md:order-2 flex-auto w-full md:max-w-md">
+<img src=/features-properties.png alt class="border-gray-300 border-2">
+</div>
+<div class="order-2 md:order-1 flex-grow md:pr-4">
+<p>Every entry in a neolace knowledge base has relationships to other entries. Reverse relationships are automatically shown - for example, if you say that "ponderosa pine" is a type of "pine tree", then when you view the "pine tree" entry, you'll see that it automatically lists "ponderosa pine" as one of the types of pines.</p>
+<p>Entries also have properties, specifying key facts about them in an organized way, according to a schema or taxonomy.</p>
+</div>
+</div>
+<h2 id=lookup-expressions>Lookup expressions</h2>
+<p>When you're writing text in a Neolace article, or setting a property value, you can use lookup expressions, much like you can use formulas in an Excel spreadsheet. So rather than writing "Apple sells 4 different models of notebook", you can instead write a lookup expression: "Apple sells {=entry("apple-corp").prop("products").filter(is_a=entry("notebook-computer")).count()} different models of notebook". Now the article will always be up to date, automatically showing the correct number based on the latest data in the knowledge base.</p>
+<h2 id=markdown-based>Markdown based</h2>
+<p>The descriptions and article text of a neolace entry are written with a simple formatting language called Markdown. Markdown is used on many sites and is a simple and well-loved way to format text. If you love Markdown, you&rsquo;ll love neolace.</p>
+<h2 id=graph-property-flow>Graph property flow</h2>
+<p>If you put in your knowledge base that a &ldquo;Tesla Model S&rdquo; is a type of &ldquo;car&rdquo;, and on the &ldquo;car&rdquo; entry you put that a car &ldquo;has four wheels&rdquo;, then when you view the &ldquo;Tesla Model S&rdquo; entry, the page will display that the Tesla Model S has four wheels. This is because neolace understands how entries are related to each other and relevant properties &ldquo;flow through the graph&rdquo;, meaning that you can get more useful and accurate information out of neolace while putting less information in.</p>
+<p>Other platforms generally don&rsquo;t do this, instead giving you just the relationship data and leaving you to compute the implications yourself. We don&rsquo;t like that approach because it makes more work for the user and can mean that different users get different results.</p>
+<h2 id=change-requests>Change requests</h2>
+<p><em>(In Development)</em> When you go to make an edit to an entry in a neolace knowledge base, your changes aren&rsquo;t necessarily saved right away. Usually the edits become a &ldquo;draft&rdquo; first, which everyone can see and comment on. An editor will quickly review and make sure the changes make sense before accepting them.</p>
+<p>If you&rsquo;re familiar with GitHub, this is similar to a &ldquo;Pull Request&rdquo;, and is a key technique for making open source collaboration possible. We&rsquo;re just applying it to knowledge rather than code.</p>
+</div>
+</main>
+</body>
+</html>
