@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 @layer base {
+    html, body {
+        overscroll-behavior-y: none;
+    }
     html {
         scroll-behavior: smooth;
         font-feature-settings:
