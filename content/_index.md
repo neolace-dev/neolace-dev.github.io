@@ -22,7 +22,7 @@ An obvious choice for a knowledge base platform is a wiki. However:
 
 ## What about a git repository?
 
-* Putting Markdown files into a GitHub repository can create nice handbooks like [GtiLab's](https://about.gitlab.com/handbook/) or [OpenCraft's](https://handbook.opencraft.com/en/latest/), but is difficult for non-technical users to contribute to, and provides a very rudimentary editing experience, without features like auto-completion when linking to another article.
+* Putting Markdown files into a GitHub repository can create nice handbooks like [GitLab's](https://about.gitlab.com/handbook/) or [OpenCraft's](https://handbook.opencraft.com/en/latest/), but is difficult for non-technical users to contribute to, and provides a very rudimentary editing experience, without features like auto-completion when linking to another article.
 
 ## neolace
 
