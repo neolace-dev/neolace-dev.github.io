@@ -5,7 +5,7 @@ type: Page
 toc: false
 ---
 
-At neolace, we're building the world's best platform for sharing technical knowledge, with a particular focus on knowledge that's shared and developed by multiple organizations - such as members of a consortium. Each neolace-powered site presents articles, images, drawings, and other technical content in a highly organized fashion, and the platform has clever innovations to make it easy to keep the content organized and up to date as it grows. Content can be restricted to selected groups or open to the public, and contributions can be required to receive approval from an editor before being accepted.
+Neolace is a collaborative platform for sharing technical knowledge, with a focus on sharing knowledge across organizational boundaries - such as among members of a consortium. By making it easier to discover the latest knowledge on a given topic, Neolace can accelerate discovery and avoid redundant work. Each Neolace site has the familiar interface of a wiki (with articles, images, technical drawings, etc.) but provides more powerful tools for the collaborative creation, organization and approval of technical content. Content can be restricted to selected groups or open to the public, and contributions can be required to receive approval from an editor before being accepted.
 
 {{< feature title="Familiar reading experience" img="/features-plantdb.png" >}}
   <p>Every entry in a neolace knowledge base can have an article, with text, images, properties, and links. You can read it as easily as reading an article on Wikipedia. But unlike Wikipedia, neolace entries are easy for machines to read too.</p>
